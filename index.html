@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HEX DIGITAL | Tecnología & Soluciones Inteligentes</title>
+    <title>HEX DIGITAL | Historias de Amor y Experiencias Digitales</title>
     <style>
         :root {
-            --bg-color: #030712;
-            --card-bg: rgba(17, 24, 39, 0.7);
-            --primary: #6366f1;
-            --primary-glow: rgba(99, 102, 241, 0.4);
-            --accent: #22d3ee;
+            --bg-color: #050508;
+            --card-bg: rgba(18, 18, 26, 0.7);
+            --primary: #f43f5e;
+            --primary-glow: rgba(244, 63, 94, 0.3);
+            --accent: #fb7185;
             --text-main: #f9fafb;
             --text-muted: #9ca3af;
             --border: rgba(255, 255, 255, 0.08);
@@ -31,79 +31,73 @@
             position: relative;
         }
 
-        /* Fondo tecnológico con brillo difuso */
+        /* Fondo elegante con un brillo romántico/tecnológico sutil */
         body::before {
             content: '';
             position: absolute;
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 800px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(3, 7, 18, 0) 70%);
+            width: 700px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(244, 63, 94, 0.12) 0%, rgba(5, 5, 8, 0) 70%);
             z-index: -1;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 950px;
             margin: 0 auto;
-            padding: 60px 20px;
+            padding: 50px 20px;
         }
 
-        /* Header / Hero */
         header {
             text-align: center;
-            margin-bottom: 70px;
+            margin-bottom: 60px;
         }
 
         .badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(99, 102, 241, 0.1);
-            color: #818cf8;
+            background: rgba(244, 63, 94, 0.1);
+            color: #fda4af;
             padding: 8px 18px;
             border-radius: 30px;
             font-size: 13px;
             font-weight: 700;
             letter-spacing: 1px;
             margin-bottom: 25px;
-            border: 1px solid rgba(99, 102, 241, 0.3);
-            box-shadow: 0 0 20px rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(244, 63, 94, 0.3);
+            box-shadow: 0 0 20px rgba(244, 63, 94, 0.1);
         }
 
-        .pulse-dot {
-            width: 8px;
-            height: 8px;
-            background-color: #22c55e;
-            border-radius: 50%;
-            box-shadow: 0 0 8px #22c55e;
-            animation: pulse 2s infinite;
+        .pulse-heart {
+            color: #f43f5e;
+            animation: heartbeat 1.5s infinite;
         }
 
-        @keyframes pulse {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
         }
 
         h1 {
-            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
             font-weight: 900;
-            margin-bottom: 20px;
-            letter-spacing: -1.5px;
-            line-height: 1.1;
-            background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
+            margin-bottom: 18px;
+            letter-spacing: -1px;
+            line-height: 1.15;
+            background: linear-gradient(135deg, #ffffff 40%, #fda4af 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .tagline {
-            font-size: clamp(1rem, 2vw, 1.25rem);
+            font-size: clamp(1rem, 2vw, 1.2rem);
             color: var(--text-muted);
             margin-bottom: 35px;
             line-height: 1.6;
-            max-width: 700px;
+            max-width: 650px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -130,7 +124,7 @@
             box-shadow: 0 6px 30px rgba(37, 211, 102, 0.5);
         }
 
-        /* Secciones de Servicios */
+        /* Servicios */
         .section-title {
             font-size: 1.5rem;
             color: #fff;
@@ -158,7 +152,7 @@
 
         .service-card:hover {
             transform: translateY(-5px);
-            border-color: rgba(99, 102, 241, 0.4);
+            border-color: rgba(244, 63, 94, 0.4);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
@@ -179,97 +173,62 @@
             line-height: 1.5;
         }
 
-        /* Sección de Trabajos (Mockups Tecnológicos Anónimos y Profesionales) */
-        .portfolio-grid {
+        /* Ejemplos / Experiencias (Sin mostrar rostros ni datos personales) */
+        .examples-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
             margin-bottom: 60px;
         }
 
-        .project-card {
-            background: rgba(11, 15, 25, 0.9);
+        .example-card {
+            background: rgba(12, 12, 18, 0.9);
             border: 1px solid var(--border);
             border-radius: 16px;
             overflow: hidden;
             transition: transform 0.3s ease;
         }
 
-        .project-card:hover {
+        .example-card:hover {
             transform: translateY(-5px);
-            border-color: rgba(34, 211, 238, 0.4);
+            border-color: rgba(244, 63, 94, 0.4);
         }
 
-        /* Pantalla simulada tipo código/sistema corporativo */
-        .tech-mockup {
-            background: #0d1117;
-            height: 160px;
+        .preview-box {
+            background: #09090e;
+            height: 150px;
             border-bottom: 1px solid var(--border);
-            padding: 15px;
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            font-family: monospace;
+            align-items: center;
+            justify-content: center;
             position: relative;
             overflow: hidden;
         }
 
-        .mockup-header {
-            display: flex;
-            gap: 6px;
+        .preview-content {
+            text-align: center;
+            padding: 15px;
         }
 
-        .dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-        }
-
-        .dot-red { background: #ef4444; }
-        .dot-yellow { background: #f59e0b; }
-        .dot-green { background: #22c55e; }
-
-        .mockup-body {
-            color: #38bdf8;
+        .preview-content span {
             font-size: 0.85rem;
-            line-height: 1.4;
+            color: #fda4af;
+            background: rgba(244, 63, 94, 0.1);
+            padding: 4px 10px;
+            border-radius: 20px;
         }
 
-        .mockup-pulse-line {
-            height: 4px;
-            width: 60%;
-            background: linear-gradient(90deg, #6366f1, #22d3ee);
-            border-radius: 2px;
-            animation: loadBar 3s infinite ease-in-out;
-        }
-
-        @keyframes loadBar {
-            0% { width: 30%; }
-            50% { width: 85%; }
-            100% { width: 30%; }
-        }
-
-        .project-info {
+        .example-info {
             padding: 24px;
         }
 
-        .project-tag {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--accent);
-            font-weight: 700;
-            margin-bottom: 8px;
-            display: block;
-        }
-
-        .project-info h4 {
+        .example-info h4 {
             color: #fff;
             margin-bottom: 8px;
             font-size: 1.15rem;
         }
 
-        .project-info p {
+        .example-info p {
             color: var(--text-muted);
             font-size: 0.9rem;
             line-height: 1.5;
@@ -290,109 +249,84 @@
     <div class="container">
         <header>
             <div class="badge">
-                <div class="pulse-dot"></div>
-                SISTEMAS ACTIVOS &bull; HEX DIGITAL
+                <span class="pulse-heart">❤️</span> HEX DIGITAL &bull; EXPERIENCIAS ROMÁNTICAS
             </div>
-            <h1>Tecnología para llevar tus ideas más lejos. ⚡</h1>
-            <p class="tagline">Construimos plataformas web de alto rendimiento, arquitectura cloud e integraciones con Inteligencia Artificial orientadas al crecimiento empresarial.</p>
+            <h1>Historias de amor digitales hechas a tu medida. ⚡</h1>
+            <p class="tagline">Sorprende a tu pareja de una forma inolvidable. Creamos páginas web de amor exclusivas, invitaciones digitales interactivas y cartas con inteligencia artificial.</p>
             
-            <a href="https://wa.me/573106915143?text=Hola,%20vengo%20de%20la%20web%20de%20HEX%20DIGITAL%20y%20me%20interesa%20cotizar%20un%20proyecto." target="_blank" class="whatsapp-btn">
-                💬 Iniciar Consultoría por WhatsApp
+            <a href="https://wa.me/573106915143?text=Hola,%20quiero%20sorprender%20a%20mi%20pareja%20con%20una%20página%20web%20o%20carta%20interactiva." target="_blank" class="whatsapp-btn">
+                ✨ Sorprende a tu pareja aquí (WhatsApp)
             </a>
         </header>
 
-        <h2 class="section-title">🚀 Capacidades Principales</h2>
+        <h2 class="section-title">💌 ¿Qué ofrecemos para ti?</h2>
         <div class="services-grid">
             <div class="service-card">
                 <div class="service-icon">💻</div>
-                <h3>Ingeniería Web Avanzada</h3>
-                <p>Desarrollo de interfaces ultrarrápidas, diseño responsivo impecable y código optimizado para máxima conversión.</p>
+                <h3>Páginas Web de Amor</h3>
+                <p>Un sitio web personalizado con contador de tiempo juntos, galerías de fotos protegidas, música de fondo y tus mejores recuerdos.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">🤖</div>
-                <h3>Automatización con IA</h3>
-                <p>Implementación de agentes inteligentes, flujos de respuesta automatizados y modelos adaptados a tu negocio.</p>
+                <h3>Cartas Interactivas con IA</h3>
+                <p>Mensajes interactivos donde la inteligencia artificial ayuda a plasmar tus sentimientos más profundos en una experiencia única.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">⚡</div>
-                <h3>Arquitectura & UI/UX</h3>
-                <p>Experiencias digitales intuitivas diseñadas bajo estándares modernos de usabilidad y rendimiento en la nube.</p>
+                <div class="service-icon">✨</div>
+                <h3>Invitaciones y Detalles</h3>
+                <p>Invitaciones digitales elegantes para aniversarios, pedidas de mano o fechas especiales con confirmación directa.</p>
             </div>
         </div>
 
-        <h2 class="section-title">🔒 Casos de Éxito & Sistemas Desplegados</h2>
-        <p style="color: var(--text-muted); margin-bottom: 25px; font-size: 0.95rem;">Por políticas de confidencialidad corporativa y protección de datos, anonimizamos los despliegues de infraestructura técnica de nuestros clientes.</p>
+        <h2 class="section-title">🔒 Ejemplos de Experiencias Creadas</h2>
+        <p style="color: var(--text-muted); margin-bottom: 25px; font-size: 0.95rem;">Diseños limpios, privados y emotivos que resguardan la identidad y privacidad de cada pareja.</p>
         
-        <div class="portfolio-grid">
-            <!-- Proyecto 1 -->
-            <div class="project-card">
-                <div class="tech-mockup">
-                    <div class="mockup-header">
-                        <div class="dot dot-red"></div>
-                        <div class="dot dot-yellow"></div>
-                        <div class="dot dot-green"></div>
+        <div class="examples-grid">
+            <!-- Ejemplo 1 -->
+            <div class="example-card">
+                <div class="preview-box">
+                    <div class="preview-content">
+                        <span style="font-size: 1.5rem; display: block; margin-bottom: 6px;">⏳ 365 Días</span>
+                        <span>Contador de Tiempo en Vivo</span>
                     </div>
-                    <div class="mockup-body">
-                        &gt; status: cluster_active [OK]<br>
-                        &gt; ai_engine: active_model_v4<br>
-                        &gt; latency: 18ms
-                    </div>
-                    <div class="mockup-pulse-line"></div>
                 </div>
-                <div class="project-info">
-                    <span class="project-tag">E-Commerce & IA</span>
-                    <h4>Core de Ventas Inteligente</h4>
-                    <p>Plataforma comercial con motor predictivo y gestión automática de inventarios en tiempo real.</p>
+                <div class="example-info">
+                    <h4>Web de Aniversario Romántico</h4>
+                    <p>Sitio interactivo con línea de tiempo de la relación, contador de días exactos y canciones favoritas de fondo.</p>
                 </div>
             </div>
 
-            <!-- Proyecto 2 -->
-            <div class="project-card">
-                <div class="tech-mockup">
-                    <div class="mockup-header">
-                        <div class="dot dot-red"></div>
-                        <div class="dot dot-yellow"></div>
-                        <div class="dot dot-green"></div>
+            <!-- Ejemplo 2 -->
+            <div class="example-card">
+                <div class="preview-box">
+                    <div class="preview-content">
+                        <span style="font-size: 1.5rem; display: block; margin-bottom: 6px;">💌 Carta IA</span>
+                        <span>Experiencia Interactiva</span>
                     </div>
-                    <div class="mockup-body">
-                        &gt; fintech_secure_gateway: online<br>
-                        &gt; encryption: AES-256-GCM<br>
-                        &gt; throughput: 4.2k req/s
-                    </div>
-                    <div class="mockup-pulse-line" style="background: linear-gradient(90deg, #22d3ee, #3b82f6);"></div>
                 </div>
-                <div class="project-info">
-                    <span class="project-tag">Fintech / Web App</span>
-                    <h4>Portal Transaccional Seguro</h4>
-                    <p>Rediseño de interfaz de alta seguridad con optimización extrema de carga para sector financiero.</p>
+                <div class="example-info">
+                    <h4>Carta de Amor Interactiva</h4>
+                    <p>Una experiencia digital donde la pareja descubre mensajes ocultos, poemas y memorias de forma dinámica.</p>
                 </div>
             </div>
 
-            <!-- Proyecto 3 -->
-            <div class="project-card">
-                <div class="tech-mockup">
-                    <div class="mockup-header">
-                        <div class="dot dot-red"></div>
-                        <div class="dot dot-yellow"></div>
-                        <div class="dot dot-green"></div>
+            <!-- Ejemplo 3 -->
+            <div class="example-card">
+                <div class="preview-box">
+                    <div class="preview-content">
+                        <span style="font-size: 1.5rem; display: block; margin-bottom: 6px;">💍 ¿Te casarías conmigo?</span>
+                        <span>Invitación Especial</span>
                     </div>
-                    <div class="mockup-body">
-                        &gt; neural_bot_listener: listening<br>
-                        &gt; active_sessions: 1,420<br>
-                        &gt; response_rate: 99.8%
-                    </div>
-                    <div class="mockup-pulse-line" style="background: linear-gradient(90deg, #a855f7, #6366f1);"></div>
                 </div>
-                <div class="project-info">
-                    <span class="project-tag">Automatización & CRM</span>
-                    <h4>Orquestador de Atención 24/7</h4>
-                    <p>Sistema centralizado de flujos conversacionales automatizados para soporte multicanal.</p>
+                <div class="example-info">
+                    <h4>Propuesta e Invitaciones</h4>
+                    <p>Páginas minimalistas de alta carga emocional diseñadas exclusivamente para momentos que marcan la vida.</p>
                 </div>
             </div>
         </div>
 
         <footer>
-            <p>&copy; 2026 HEX DIGITAL. Todos los derechos reservados.</p>
+            <p>&copy; 2026 HEX DIGITAL. Convirtiendo momentos en recuerdos eternos.</p>
         </footer>
     </div>
 
